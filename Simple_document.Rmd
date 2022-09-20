@@ -1,7 +1,7 @@
-----
-title: "Simple document"
-output: "html_document"
----
+|                          |
+|--------------------------|
+| title: "Simple document" |
+| output: "html_document"  |
 
 ```{r, echo = FALSE, message = FALSE}
 library(tidyverse)
@@ -11,7 +11,7 @@ I'm an R Markdown document!
 
 # Section 1
 
-Here's a **code chunk** that samples from a _normal distribution_:
+Here's a **code chunk** that samples from a *normal distribution*:
 
 ```{r}
 samp = rnorm(100)
@@ -20,15 +20,13 @@ length(samp)
 
 # Section 2
 
-I can take the mean of the sample, too!
-The mean is `r round(mean(samp), 2)`.
+I can take the mean of the sample, too! The mean is `r round(mean(samp), 2)`.
 
 # Section 3
 
 ### Plot from last time
 
-This is going to make a plot! First I generate a data frame then
-use `ggplot` to create a scatterplot.
+This is going to make a plot! First I generate a data frame then use `ggplot` to create a scatterplot.
 
 ```{r chunk_scatterplot, echo = FALSE}
 plot_df = 
@@ -42,9 +40,7 @@ ggplot(plot_df, aes(x = x, y = y)) + geom_point()
 
 # Section 4
 
-This is the learning assessment in the P8105 R Markdown formatting
-section. This is going to create a data frame and use ggplot to 
-make a histogram.
+This is the learning assessment in the P8105 R Markdown formatting section. This is going to create a data frame and use ggplot to make a histogram.
 
 ```{r}
 la_df = 
@@ -57,7 +53,5 @@ la_df =
 ggplot(la_df, aes(x = abs_norm)) + geom_histogram()
 ```
 
-Here's a list:
 
-*List item 1
-*List item 2
+
