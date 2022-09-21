@@ -1,17 +1,18 @@
----------------
-title: "Simple document" 
+---
+title: "Simple document"
 output: github_document
----------------
+---
 
 ```{r, echo = FALSE, message = FALSE}
 library(tidyverse)
 ```
 
-I'm an R Markdown document!
+I'm an R Markdown document! 
 
 # Section 1
 
-Here's a **code chunk** that samples from a *normal distribution*:
+Here's a **code chunk** that samples from 
+a _normal distribution_:
 
 ```{r}
 samp = rnorm(100)
@@ -20,38 +21,41 @@ length(samp)
 
 # Section 2
 
-I can take the mean of the sample, too! The mean is `r round(mean(samp), 2)`.
+I can take the mean of the sample, too!
+The mean is `r round(mean(samp), 2)`.
 
 # Section 3
 
 ### Plot from last time
 
-This is going to make a plot! First I generate a data frame then use `ggplot` to create a scatterplot.
+This is going to make a plot! First I generate a dataframe, then use `ggplot` to make a scatterplot.  
 
 ```{r chunk_scatterplot, echo = FALSE}
 plot_df = 
   tibble(
-  x = rnorm(n = 1000),
-  y = 1 + 2 * x + rnorm(n = 1000)
-)
-
+    x = rnorm(n = 1000),
+    y = 1 + 2 * x + rnorm(n = 1000)
+  )
 ggplot(plot_df, aes(x = x, y = y)) + geom_point()
 ```
 
-# Section 4
+### Plot for Learning Assessment
 
-This is the learning assessment in the P8105 R Markdown formatting section. This is going to create a data frame and use ggplot to make a histogram.
+This is a quick kind of solution to the LA.
 
-```{r, echo = FALSE, message = FALSE}
+```{r}
 la_df = 
-    tibble(
-        norm = rnorm(n = 500, mean = 1),
-        logical = norm > 0,
-        abs_norm = abs(norm)
-    )
-
+  tibble(
+    norm = rnorm(n = 500, mean = 1),
+    logical = norm > 0,
+    abs_norm = abs(norm)
+  )
 ggplot(la_df, aes(x = abs_norm)) + geom_histogram()
 ```
 
+Here's a list:
+
+* List item 1
+* List item 2
 
 
