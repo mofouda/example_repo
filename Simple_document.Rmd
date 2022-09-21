@@ -1,7 +1,7 @@
-|                          |
-|--------------------------|
-| title: "Simple document" |
-| output: "github_document"  |
+---------------
+title: "Simple document" 
+output: github_document
+---------------
 
 ```{r, echo = FALSE, message = FALSE}
 library(tidyverse)
@@ -42,7 +42,7 @@ ggplot(plot_df, aes(x = x, y = y)) + geom_point()
 
 This is the learning assessment in the P8105 R Markdown formatting section. This is going to create a data frame and use ggplot to make a histogram.
 
-```{r}
+```{r, echo = FALSE, message = FALSE}
 la_df = 
     tibble(
         norm = rnorm(n = 500, mean = 1),
